@@ -1,0 +1,27 @@
+import pygame
+pygame.init()
+dis = pygame.display.set_mode((600, 450))
+pygame.display.update()
+pygame.display.set_caption("Змея")
+blue = [0,0,250]
+game_over = False
+
+x1_change = 0
+y1_change = 0
+
+clock = pygame.time.Clock()
+snake_speed = 30
+
+font_style = pygame.font.SysFont(None, 50)
+
+
+while not game_over:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            game_over = True
+            print(event)
+            
+    pygame.draw.rect(dis, blue,[300,125,20,20])
+    pygame.display.update()
+pygame.quit()
+quit()
